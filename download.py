@@ -1,4 +1,4 @@
-import requests,re,hashlib,sys,
+import requests,re,hashlib,sys
 import img2pdf #https://github.com/josch/img2pdf
 import PyPDF2 #https://github.com/mstamy2/PyPDF2
 
