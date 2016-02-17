@@ -29,7 +29,6 @@ except NameError:
 bookid = int(input("\nInsert book ID to download: "))
 
 data = requests.get("https://webapp.scuolabook.it/books/" + str(bookid) + ".json", headers=header).text
-print data
 title = re.search('"ws_title":"(.*?)"', data).group(1).encode('utf-8')
 author = re.search('"ws_author":"(.*?)"', data).group(1).encode('utf-8')
 publisher = re.search('"ws_publisher":"(.*?)"', data).group(1).encode('utf-8')
