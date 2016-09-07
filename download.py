@@ -32,7 +32,9 @@ data = requests.get("https://webapp.scuolabook.it/books/" + str(bookid), headers
 title = re.search('"ws_title":"(.*?)"', data).group(1).encode('utf-8')
 author = re.search('"ws_author":"(.*?)"', data).group(1).encode('utf-8')
 publisher = re.search('"ws_publisher":"(.*?)"', data).group(1).encode('utf-8')
-isbn = re.search('"ws_isbn":"(.*?)"', data).group(1).encode('utf-8')
+isbn = re.search('"ws_isbn":"(.*?)"', data)
+if isbn:
+    isbn = isbn.group(1).encode('utf-8')
 npages = int(re.search('"ws_num_pages":"(.*?)"', data).group(1).encode('utf-8'))
 
 print("\n[Selected book]\n\nTitle: '{}'\nAuthor: {} \nPublisher: {} \nISBN: {} \nPages: {} \n".format(title, author, publisher, isbn, str(npages)))
