@@ -76,5 +76,5 @@ merger = PyPDF2.PdfFileMerger()
 print("\nMerging everything...")
 for filename in pages:
     merger.append(PyPDF2.PdfFileReader(open(cache + filename + '.pdf', 'rb')))
-merger.write(title + ".pdf")
+merger.write(title.decode() + ".pdf")
 print("Well done!")
