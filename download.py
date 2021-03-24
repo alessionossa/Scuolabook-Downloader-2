@@ -9,7 +9,7 @@ try:
     input = raw_input
 except NameError:
     pass
-session = input("Your '_turner_session' key: ")
+session = input("Your '_reader_session' key: ")
 cache = "/tmp/"
 
 header = {'X-Requested-With': 'XMLHttpRequest','Accept': 'application/json, text/javascript, */*; q=0.01','Cookie': '_reader_session=' + session}
