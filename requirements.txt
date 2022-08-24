@@ -1,0 +1,4 @@
+requests
+img2pdf
+PyPDF4
+rich
